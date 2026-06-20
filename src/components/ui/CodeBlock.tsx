@@ -1,5 +1,4 @@
-import { useEffect, useRef, useCallback } from 'react'
-import { useState } from 'react'
+import { useEffect, useRef, useCallback, useState } from 'react'
 import Prism from 'prismjs'
 import 'prismjs/components/prism-typescript'
 import 'prismjs/components/prism-javascript'
@@ -57,17 +56,17 @@ export function CodeBlock({ snippet }: CodeBlockProps) {
       <div
         className="flex items-center justify-between px-4 py-2.5"
         style={{
-          background: 'var(--color-carbono)',
-          borderBottom: '1px solid oklch(0.3 0.01 146 / 0.5)',
+          background: 'var(--color-editor-bg)',
+          borderBottom: '1px solid var(--color-editor-header-border)',
         }}
       >
         <div className="flex items-center gap-2">
-          <span className="flex size-2.5 rounded-full" style={{ background: '#ef4444' }} />
-          <span className="flex size-2.5 rounded-full" style={{ background: '#eab308' }} />
-          <span className="flex size-2.5 rounded-full" style={{ background: '#4ade80' }} />
+          <span className="flex size-2.5 rounded-full" style={{ background: 'var(--color-editor-dot-red)' }} />
+          <span className="flex size-2.5 rounded-full" style={{ background: 'var(--color-editor-dot-yellow)' }} />
+          <span className="flex size-2.5 rounded-full" style={{ background: 'var(--color-editor-dot-green)' }} />
           <span
             className="ml-2 text-[11px] uppercase tracking-wider"
-            style={{ color: 'var(--color-verde-400)' }}
+            style={{ color: 'var(--color-editor-label)' }}
           >
             {snippet.name} · {snippet.language}
           </span>
@@ -79,11 +78,11 @@ export function CodeBlock({ snippet }: CodeBlockProps) {
           )}
           style={{
             background: copied
-              ? 'oklch(0.62 0.19 146 / 0.2)'
-              : 'oklch(1 0 0 / 0.08)',
+              ? 'var(--color-editor-btn-bg-copied)'
+              : 'var(--color-editor-btn-bg)',
             color: copied
-              ? 'var(--color-verde-400)'
-              : 'var(--color-verde-100)',
+              ? 'var(--color-editor-btn-text-hover)'
+              : 'var(--color-editor-btn-text)',
           }}
         >
           {copied ? (
