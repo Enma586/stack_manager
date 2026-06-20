@@ -1,0 +1,127 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-verde-50: #f0fdf4;
+    --color-verde-100: #dcfce7;
+    --color-verde-200: #bbf7d0;
+    --color-verde-300: #86efac;
+    --color-verde-400: #4ade80;
+    --color-verde-500: #16a34a;
+    --color-verde-600: #15803d;
+    --color-verde-700: #166534;
+    --color-verde-800: #14532d;
+    --color-verde-900: #052e16;
+
+    --color-hierba: oklch(0.62 0.19 146);
+    --color-hierba-claro: oklch(0.87 0.1 146);
+    --color-hierba-oscuro: oklch(0.37 0.12 146);
+
+    --color-blanco-puro: oklch(1 0 0);
+    --color-blanco-humo: oklch(0.97 0.005 146);
+    --color-carbono: oklch(0.15 0.01 146);
+    --color-carbono-claro: oklch(0.35 0.015 146);
+
+    --radius-xs: 0.25rem;
+    --radius-sm: 0.5rem;
+    --radius-md: 0.75rem;
+    --radius-lg: 1rem;
+    --radius-xl: 1.5rem;
+
+    --shadow-caja: 0 1px 3px oklch(0 0 0 / 0.08), 0 1px 2px oklch(0 0 0 / 0.06);
+    --shadow-elevado: 0 4px 12px oklch(0 0 0 / 0.1), 0 2px 4px oklch(0 0 0 / 0.06);
+    --shadow-enfasis: 0 0 0 3px oklch(0.62 0.19 146 / 0.3);
+  }
+}
+
+body {
+  margin: 0;
+  font-family: 'SF Mono', 'Cascadia Code', 'Fira Code', 'JetBrains Mono', 'Consolas', monospace;
+  background: var(--color-blanco-humo);
+  color: var(--color-carbono);
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: var(--color-verde-300);
+  color: var(--color-verde-900);
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-verde-300);
+  border-radius: 3px;
+}
+
+/* Prism theme override — verde sobre fondo oscuro */
+code[class*="language-"],
+pre[class*="language-"] {
+  font-family: 'SF Mono', 'Cascadia Code', 'Fira Code', monospace;
+  font-size: 0.875rem;
+  line-height: 1.6;
+  direction: ltr;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  tab-size: 2;
+  hyphens: none;
+}
+
+pre[class*="language-"] {
+  background: var(--color-carbono);
+  border-radius: var(--radius-md);
+  padding: 1.25rem;
+  overflow-x: auto;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata { color: #6b7280; }
+
+.token.punctuation { color: #d1d5db; }
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol,
+.token.deleted { color: #4ade80; }
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted { color: #86efac; }
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string { color: #bbf7d0; }
+
+.token.atrule,
+.token.attr-value,
+.token.keyword { color: #4ade80; }
+
+.token.function,
+.token.class-name { color: #fde68a; }
+
+.token.regex,
+.token.important,
+.token.variable { color: #fbbf24; }
+
+.token.important,
+.token.bold { font-weight: bold; }
+
+.token.italic { font-style: italic; }
