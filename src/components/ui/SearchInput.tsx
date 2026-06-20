@@ -22,7 +22,7 @@ export function SearchInput({ value, onChange }: SearchInputProps) {
         type="text"
         value={value}
         onChange={(e) => onChange(e.target.value)}
-        placeholder="Buscar tecnología…"
+        placeholder="Buscar tecnologia..."
         className={cn(
           'w-full rounded-xl border-2 py-3 pl-10 pr-10 text-sm',
           'bg-white outline-none transition-all duration-200',

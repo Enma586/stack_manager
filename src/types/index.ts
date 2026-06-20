@@ -6,6 +6,7 @@ export interface Snippet {
   installCommand: string
   code: string
   language: string
+  logoSrc?: string
 }
 
 export interface SnippetCollection {

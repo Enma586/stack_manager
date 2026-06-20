@@ -1,10 +1,10 @@
 import { useState, useMemo } from 'react'
 import snippetsData from '@/data/snippets.json'
 import type { Snippet, SnippetCollection } from '@/types'
-import { SearchInput } from '@/features/snippets/components/SearchInput'
+import { SearchInput } from '@/components/ui/SearchInput'
 import { TechnologyList } from '@/features/snippets/components/TechnologyList'
-import { CodeBlock } from '@/features/snippets/components/CodeBlock'
-import { InstallCommand } from '@/features/snippets/components/InstallCommand'
+import { CodeBlock } from '@/components/ui/CodeBlock'
+import { InstallCommand } from '@/components/ui/InstallCommand'
 
 const data = (snippetsData as SnippetCollection).technologies
 

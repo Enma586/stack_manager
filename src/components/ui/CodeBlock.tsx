@@ -1,4 +1,5 @@
 import { useEffect, useRef, useCallback } from 'react'
+import { useState } from 'react'
 import Prism from 'prismjs'
 import 'prismjs/components/prism-typescript'
 import 'prismjs/components/prism-javascript'
@@ -7,7 +8,6 @@ import 'prismjs/components/prism-yaml'
 import { Copy, Check } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import type { Snippet } from '@/types'
-import { useState } from 'react'
 
 interface CodeBlockProps {
   snippet: Snippet
@@ -36,7 +36,6 @@ export function CodeBlock({ snippet }: CodeBlockProps) {
       setCopied(true)
       setTimeout(() => setCopied(false), 2000)
     } catch {
-      // fallback
       const ta = document.createElement('textarea')
       ta.value = snippet.code
       document.body.appendChild(ta)
@@ -55,7 +54,6 @@ export function CodeBlock({ snippet }: CodeBlockProps) {
       className="overflow-hidden rounded-xl shadow-sm"
       style={{ background: 'var(--color-blanco-puro)' }}
     >
-      {/* header */}
       <div
         className="flex items-center justify-between px-4 py-2.5"
         style={{
@@ -102,7 +100,6 @@ export function CodeBlock({ snippet }: CodeBlockProps) {
         </button>
       </div>
 
-      {/* code */}
       <div className="overflow-x-auto">
         <pre className="!m-0 !rounded-none !border-0 !bg-transparent">
           <code ref={codeRef} className={`language-${lang}`}>
