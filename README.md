@@ -8,7 +8,7 @@ Herramienta para organizar snippets tecnologicos de Node.js/NestJS. Busca por te
 |---|---|
 | Framework | React 19 + TypeScript 5.6 |
 | Build | Vite 6 + tailwindcss/vite |
-| Estilos | Tailwind CSS v4 + CSS variables + diseno propio |
+| Estilos | Tailwind CSS v4 + CSS variables + diseño propio |
 | Sintaxis | Prism.js |
 | Iconos | lucide-react |
 | Utilidades | clsx + tailwind-merge |
@@ -116,4 +116,3 @@ Los colores y sombras se definen como variables CSS en `src/index.css`. La palet
 - No requiere backend ni base de datos. Los datos se cargan desde el JSON local.
 - No usa .env, la aplicacion es 100% auto-contenida.
 - Los logos se cargan desde el CDN de simpleicons.org. Puedes descargarlos y servirlos localmente si prefieres funcionar offline.
-- Sigue la skill SKILL_WEB_SAAS: componentes originales, sin shadcn/ui, sin librerias de componentes predefinidos.
