@@ -6,8 +6,8 @@ Herramienta para organizar snippets tecnologicos de Node.js/NestJS. Busca por te
 
 | Categoria | Libreria |
 |---|---|
-| Framework | React 19 + TypeScript 6 |
-| Build | Vite 8 + tailwindcss/vite |
+| Framework | React 19 + TypeScript 5.6 |
+| Build | Vite 6 + tailwindcss/vite |
 | Estilos | Tailwind CSS v4 + CSS variables + diseno propio |
 | Sintaxis | Prism.js |
 | Iconos | lucide-react |
